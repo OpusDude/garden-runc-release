@@ -1,0 +1,13 @@
+New-Item C:\depot -ItemType Directory -Force
+New-Item C:\graph -ItemType Directory -Force
+
+C:\var\vcap\packages\guardian-windows\gdn.exe `
+  server `
+  --skip-setup `
+  --runtime-plugin C:\var\vcap\packages\guardian-windows\plugin.exe `
+  --image-plugin C:\var\vcap\packages\guardian-windows\plugin.exe `
+  --network-plugin C:\var\vcap\packages\guardian-windows\plugin.exe `
+  --bind-ip 0.0.0.0 `
+  --bind-port 7777 `
+  --depot C:\depot `
+  --graph C:\graph

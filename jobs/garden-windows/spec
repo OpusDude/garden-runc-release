@@ -1,0 +1,12 @@
+---
+name: garden-windows
+
+templates:
+  start.ps1.erb: bin/start.ps1
+
+packages:
+  - guardian-windows
+
+properties:
+  garden.runtime_plugin:
+    description: "Path to a runtime plugin binary"
